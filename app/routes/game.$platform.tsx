@@ -131,18 +131,36 @@ export default function GamePlatformRoute() {
         ))}
       </div>
 
-      {/* Back to platforms link - 使用固定间距和正确字体 + 动画：300ms + ease-expo-out */}
+      {/* Navigation links - 使用固定间距和正确字体 + 动画：300ms + ease-expo-out */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-1.5">
-        <Link 
-          to="/game" 
-          prefetch="intent"
-          className="inline-flex items-center gap-0.5 text-base font-medium text-primary-950/70 leading-normal transition-colors duration-300 ease-expo-out hover:text-accent-hover group"
-        >
-          <svg className="w-5 h-5 transition-transform duration-300 ease-expo-out group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-          </svg>
-          <span>返回平台选择</span>
-        </Link>
+        <div className="flex items-center gap-3">
+          {/* 返回首页 */}
+          <Link
+            to="/"
+            prefetch="intent"
+            className="inline-flex items-center gap-0.5 text-base font-medium text-primary-950/70 leading-normal transition-colors duration-300 ease-expo-out hover:text-accent-hover group"
+          >
+            <svg className="w-5 h-5 transition-transform duration-300 ease-expo-out group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            <span>返回首页</span>
+          </Link>
+
+          {/* 分隔符 */}
+          <span className="text-primary-950/30">/</span>
+
+          {/* 返回平台选择 */}
+          <Link
+            to="/game"
+            prefetch="intent"
+            className="inline-flex items-center gap-0.5 text-base font-medium text-primary-950/70 leading-normal transition-colors duration-300 ease-expo-out hover:text-accent-hover group"
+          >
+            <svg className="w-5 h-5 transition-transform duration-300 ease-expo-out group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            <span>返回平台选择</span>
+          </Link>
+        </div>
       </div>
 
       <div className="relative z-10">
